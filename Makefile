@@ -1,7 +1,8 @@
 run:
-	browser-sync start -s -f . --no-notify
+	gulp serve
 
 install:
+	npm install -g gulp-cli gulp
 	npm install
 
 .PHONY: install run

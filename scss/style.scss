@@ -1,31 +1,4 @@
-/******* Bootstrap Theming ********/
-
-$primary: #17a2b8;
-$secondary: #00394f;
-
-$theme-colors: (
-    "primary": $primary,
-    "secondary": $secondary,
-);
-
-$font-family-sans-serif: 'Nunito', sans-serif;
-
-$headings-font-family: 'Handlee', cursive;
-
-$body-color: #666666;
-
-$headings-color: $secondary;
-
-$headings-font-weight: bold;
-
-$enable-responsive-font-sizes: true;
-
-$border-radius: 5px;
-
-$btn-border-radius: 30px;
-
-@import "bootstrap/scss/bootstrap";
-
+@import "bootstrap-theme";
 
 /********** Custom CSS ************/
 

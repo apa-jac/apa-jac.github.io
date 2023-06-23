@@ -12,6 +12,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "browser-sync": "^2.29.3"
+    "browser-sync": "^2.29.3",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.6"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }

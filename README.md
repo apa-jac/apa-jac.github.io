@@ -2,6 +2,20 @@
 
 APAJAC - Associação de Pais dos Autistas de Jacareí
 
+## How to install
+
+```bash
+make install
+```
+
+## How to run
+
+```bash
+make run
+```
+
+Visit <http://localhost:3001>
+
 ## Licence
 
   =>  Template Name    : KidKinder - Kindergarten Website Template
