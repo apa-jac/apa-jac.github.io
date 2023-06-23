@@ -1,0 +1,17 @@
+{
+  "name": "apajac",
+  "version": "1.0.0",
+  "description": "APAJAC - Associação de Pais dos Autistas de Jacareí",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.29.3"
+  }
+}
