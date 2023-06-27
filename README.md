@@ -16,6 +16,12 @@ make run
 
 Visit <http://localhost:3001>
 
+# References
+
+- <https://www.facebook.com/apajacoficial/?locale=pt_BR>
+- <http://apajac.blogspot.com/>
+- <https://www.solutudo.com.br/empresas/sp/jacarei/ongs-e-entidades-sociais/apajac-16427877>
+
 ## Licence
 
   =>  Template Name    : KidKinder - Kindergarten Website Template
