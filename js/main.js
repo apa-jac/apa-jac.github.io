@@ -1,11 +1,6 @@
 (function ($) {
     "use strict";
 
-    // Load content
-    $(document).ready(function () {
-      $("#content").load("html/index.html");
-    });
-
     // Dropdown on mouse hover
     $(document).ready(function () {
         function toggleNavbarMethod() {
