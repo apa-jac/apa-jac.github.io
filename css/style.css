@@ -157,3 +157,8 @@
   padding: 0;
   list-style-type: none;
 }
+
+.imgApajac {
+  margin-bottom: 48px;
+  border-radius: 5px;
+}
