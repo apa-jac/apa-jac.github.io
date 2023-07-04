@@ -1,7 +1,6 @@
 var gulp           = require('gulp');
 var browserSync    = require('browser-sync').create();
 var sass           = require('gulp-sass')(require('sass'));
-var nunjucksRender = require('gulp-nunjucks-render');
 
 // Browser sync
 gulp.task('browser-sync', function() {
@@ -25,31 +24,13 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-// Compute HTML templates using nunjucks
-gulp.task('nunjucks', function () {
-  // Gets .html and .nunjucks files in pages
-  return (
-    gulp
-      .src('html/*.+(html|nunjucks)')
-      // Renders template with nunjucks
-      .pipe(
-        nunjucksRender({
-          path: ['html/templates'],
-        })
-      )
-      .pipe(gulp.dest('.')) // output files in root folder
-  )
-})
-
 // Static Server + watching scss/html files
 gulp.task('serve', function() {
   browserSync.init({
     server: "./"
   });
 
-  gulp.parallel("nunjucks");
   gulp.watch("scss/*.scss", gulp.series('sass'));
-  gulp.watch("html/**/*.(html|nunjucks)").on('change', gulp.parallel('nunjucks'));
   gulp.watch("*.html").on('change', gulp.parallel('browser-sync-reload'));
 });
 
