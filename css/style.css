@@ -166,3 +166,23 @@
   height:150px;
 }
 
+.aboutContainer{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraph{
+  
+  width:45em;
+}
+
+.topMargin{
+  margin-top:5em;
+}
+
+.marginTitle{
+  margin-top:4em;
+}
+
