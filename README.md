@@ -24,6 +24,7 @@ Visit <http://localhost:3001>
 
 ## Licence
 
+```text
   =>  Template Name    : KidKinder - Kindergarten Website Template
 
   =>  Template Link    : https://htmlcodex.com/kindergarten-website-template
@@ -35,3 +36,4 @@ Visit <http://localhost:3001>
   =>  Author Website   : https://htmlcodex.com
 
   =>  About HTML Codex : HTML Codex is one of the top creators and publishers of Free HTML templates, HTML landing pages, HTML email templates and HTML snippets in the world. Read more at ( https://htmlcodex.com/about-us )
+```
