@@ -152,14 +152,14 @@
   background: #5992cd;
 }
 
+.img-wrapper {
+  display: flex;
+  justify-content: center; /* Aligns the image horizontally */
+}
+
 .img-apajac {
   margin-bottom: 48px;
   border-radius: 5px;
-}
-
-
-.aboutImg{
-  height:500px;
 }
 
 .imageKid{
@@ -174,7 +174,7 @@
 }
 
 .paragraph{
-  
+
   width:45em;
 }
 
@@ -198,7 +198,7 @@
   margin-left:5em;
   margin-right:5em;
 }
-  
+
 .imgs{
   width:30em;
   height:100%;
