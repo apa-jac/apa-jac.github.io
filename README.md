@@ -16,7 +16,7 @@ make run
 
 Visit <http://localhost:3001>
 
-# References
+## References
 
 - <https://www.facebook.com/apajacoficial/?locale=pt_BR>
 - <http://apajac.blogspot.com/>
