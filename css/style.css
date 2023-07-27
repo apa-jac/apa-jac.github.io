@@ -234,3 +234,6 @@
   height:50px;
 }
 
+.ratio {
+  aspect-ratio: 1;
+}

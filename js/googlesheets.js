@@ -43,7 +43,7 @@ function addAlunos(alunos) {
           ${aluno[2]}
         </div>
         <div class="d-flex align-items-center">
-          <img class="rounded-circle" src="img/apajac/2012_2.jpg"
+          <img class="rounded-circle" src="${aluno[3]}"
             style="width: 70px; height: 70px;" alt="Image">
           <div class="pl-3">
             <h5>${aluno[0]}</h5>
@@ -64,7 +64,7 @@ function addEventos(eventos) {
     const eventoHTML = `
         <div class="col-lg-4 mb-5">
         <div class="card border-0 bg-light shadow-sm pb-2">
-          <img class="card-img-top mb-2" src="img/imageKid.png" alt>
+          <img class="card-img-top mb-2" src="${evento[7]}" alt>
           <div class="card-body text-center">
             <h4 class="card-title">${evento[0]}</h4>
             <p class="card-text">${evento[1]}</p>
@@ -95,7 +95,7 @@ function addEventos(eventos) {
               <div class="col-6 py-1">${evento[5]}</div>
             </div>
           </div>
-          <a href class="btn btn-primary px-4 mx-auto mb-4">Participar</a>
+          <a href="${evento[6]}" class="btn btn-primary px-4 mx-auto mb-4">Participar</a>
         </div>
       </div>
     `;
@@ -110,7 +110,7 @@ function addVoluntarios(voluntarios) {
       <div class="col-md-6 col-lg-3 text-center team mb-5">
         <div class="position-relative overflow-hidden mb-4"
           style="border-radius: 100%;">
-          <img class="img-fluid w-100" src="img/apajac/2012_2.jpg" alt>
+          <img class="img-fluid w-100 h-100 ratio" src="${voluntario[2]}" alt>
           <div
             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
             <a class="btn btn-outline-light text-center mr-2 px-0"
