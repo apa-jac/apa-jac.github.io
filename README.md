@@ -22,6 +22,10 @@ Visit <http://localhost:3001>
 - <http://apajac.blogspot.com/>
 - <https://www.solutudo.com.br/empresas/sp/jacarei/ongs-e-entidades-sociais/apajac-16427877>
 
+## Instructions
+
+For more instructions, check <INSTRUCTIONS.md>
+
 ## Licence
 
 ```text
