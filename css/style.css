@@ -237,3 +237,7 @@
 .ratio {
   aspect-ratio: 1;
 }
+
+.MarginTitle{
+  margin-top:8px;
+}
