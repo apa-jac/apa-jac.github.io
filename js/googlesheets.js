@@ -95,7 +95,7 @@ function addEventos(eventos) {
               <div class="col-6 py-1">${evento[5]}</div>
             </div>
           </div>
-          <a href="${evento[6]}" class="btn btn-primary px-4 mx-auto mb-4">Participar</a>
+          <a href="${evento[6]}" target="_blank" class="btn btn-primary px-4 mx-auto mb-4">Participar</a>
         </div>
       </div>
     `;
