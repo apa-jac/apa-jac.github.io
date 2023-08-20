@@ -5,7 +5,7 @@ function readGoogleSheet(tabName, callback) {
 
   $.getJSON(url, function (data) {
     data.values.shift();  // Remove header
-    data.values.reverse(); // Display latest rows first
+    data.values = data.values.reverse(); // Display latest rows first
     callback(data.values);
   });
 }
