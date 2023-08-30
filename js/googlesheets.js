@@ -10,6 +10,14 @@ function readGoogleSheet(tabName, callback) {
   });
 }
 
+function getPictureUrl(url) {
+  if (url.includes("pasteboard.co")) {
+    return `https://gcdnb.pbrd.co/images/${url.split('/').pop()}`;
+  } else {
+    return url;
+  }
+}
+
 function alunosCarousel() {
   // Testimonials carousel
   $(".alunos-carousel").owlCarousel({
@@ -44,7 +52,7 @@ function addAlunos(alunos) {
           ${aluno[2]}
         </div>
         <div class="d-flex align-items-center">
-          <img class="rounded-circle" src="${aluno[3]}"
+          <img class="rounded-circle" src="${getPictureUrl(aluno[3])}"
             style="width: 70px; height: 70px;" alt="Image">
           <div class="pl-3">
             <h5>${aluno[0]}</h5>
@@ -65,7 +73,9 @@ function addEventos(eventos) {
     const eventoHTML = `
         <div class="col-lg-4 mb-5">
         <div class="card border-0 bg-light shadow-sm pb-2">
-          <img class="card-img-top mb-2" src="${evento[7]}" alt>
+          <a href="${getPictureUrl(evento[7])}" target="_blank">
+            <img class="card-img-top mb-2" src="${getPictureUrl(evento[7])}" alt>
+          </a>
           <div class="card-body text-center">
             <h4 class="card-title">${evento[0]}</h4>
             <p class="card-text">${evento[1]}</p>
@@ -111,7 +121,7 @@ function addVoluntarios(voluntarios) {
       <div class="col-md-6 col-lg-3 text-center team mb-5">
         <div class="position-relative overflow-hidden mb-4"
           style="border-radius: 100%;">
-          <img class="img-fluid w-100 h-100 ratio" src="${voluntario[2]}" alt>
+          <img class="img-fluid w-100 h-100 ratio" src="${getPictureUrl(voluntario[2])}" alt>
           <div
             class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
             <a class="btn btn-outline-light text-center mr-2 px-0"
