@@ -6,7 +6,9 @@ function readGoogleSheet(tabName, callback) {
   $.getJSON(url, function (data) {
     data.values.shift();  // Remove header
     data.values = data.values.reverse(); // Display latest rows first
-    callback(data.values);
+    if (data.values.length > 0) {
+      callback(data.values);
+    }
   });
 }
 
@@ -66,6 +68,23 @@ function addAlunos(alunos) {
   });
 
   alunosCarousel();
+}
+
+function addCampanha(campanhas) {
+  var campanha = campanhas[campanhas.length - 1];
+  const campanhaHTML = `
+  <div class="card border-0 bg-light shadow-sm pb-2">
+    <a href="${getPictureUrl(campanha[2])}" target="_blank">
+      <img class="card-img-top mb-2" src="${getPictureUrl(campanha[2])}" alt>
+    </a>
+    <div class="card-body text-center">
+      <h4 class="card-title">${campanha[0]}</h4>
+      <p class="card-text">${campanha[1]}</p>
+    </div>
+  </div>
+`;
+
+  $('.campanha').append(campanhaHTML);
 }
 
 function addEventos(eventos) {
@@ -155,4 +174,5 @@ $(document).ready(function () {
   readGoogleSheet('voluntarios', addVoluntarios);
   readGoogleSheet('eventos', addEventos);
   readGoogleSheet('alunos', addAlunos);
+  readGoogleSheet('campanhas', addCampanha);
 });

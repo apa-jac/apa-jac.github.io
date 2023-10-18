@@ -32,8 +32,13 @@
         return false;
     });
 
+    $('#pix-button').on('click', function() {
+      navigator.clipboard.writeText('14.483.016/0001-07');
+      alert("PIX copiado!");
+    })
 
-    if ($('.portfolio-container').length > 0r) {
+
+    if ($('.portfolio-container').length > 0) {
       // Portfolio isotope and filter
       var portfolioIsotope = $('.portfolio-container').isotope({
           itemSelector: '.portfolio-item',
