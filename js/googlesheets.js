@@ -5,10 +5,11 @@ function readGoogleSheet(tabName, callback) {
 
   $.getJSON(url, function (data) {
     data.values.shift();  // Remove header
+    data.values = data.values.filter(row =>
+      row[row.length - 1].toLowerCase() === 'sim' // Only use rows habilitadas
+    );
     data.values = data.values.reverse(); // Display latest rows first
-    if (data.values.length > 0) {
-      callback(data.values);
-    }
+    callback(data.values);
   });
 }
 
@@ -67,24 +68,30 @@ function addAlunos(alunos) {
     $('.alunos').append(alunoHTML);
   });
 
-  alunosCarousel();
+  if (alunos.length > 0) {
+    alunosCarousel();
+  } else {
+    $('.alunos-container').hide();
+  }
 }
 
 function addCampanha(campanhas) {
-  var campanha = campanhas[campanhas.length - 1];
-  const campanhaHTML = `
-  <div class="card border-0 bg-light shadow-sm pb-2">
-    <a href="${getPictureUrl(campanha[2])}" target="_blank">
-      <img class="card-img-top mb-2" src="${getPictureUrl(campanha[2])}" alt>
-    </a>
-    <div class="card-body text-center">
-      <h4 class="card-title">${campanha[0]}</h4>
-      <p class="card-text">${campanha[1]}</p>
+  if (campanhas.length > 0) {
+    var campanha = campanhas[campanhas.length - 1];
+    const campanhaHTML = `
+    <div class="card border-0 bg-light shadow-sm pb-2">
+      <a href="${getPictureUrl(campanha[2])}" target="_blank">
+        <img class="card-img-top mb-2" src="${getPictureUrl(campanha[2])}" alt>
+      </a>
+      <div class="card-body text-center">
+        <h4 class="card-title">${campanha[0]}</h4>
+        <p class="card-text">${campanha[1]}</p>
+      </div>
     </div>
-  </div>
-`;
+  `;
 
-  $('.campanha').append(campanhaHTML);
+    $('.campanha').append(campanhaHTML);
+  }
 }
 
 function addEventos(eventos) {
@@ -132,6 +139,10 @@ function addEventos(eventos) {
 
     $('.eventos').append(eventoHTML);
   });
+
+  if (eventos.length === 0) {
+    $('.eventos-container').hide();
+  }
 }
 
 function addVoluntarios(voluntarios) {
@@ -168,6 +179,10 @@ function addVoluntarios(voluntarios) {
 
     $('.voluntarios').append(voluntarioHTML);
   });
+
+  if (voluntarios.length === 0) {
+    $('.voluntarios-container').hide();
+  }
 }
 
 $(document).ready(function () {
