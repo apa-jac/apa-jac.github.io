@@ -8,10 +8,35 @@ APAJAC - Associação de Pais dos Autistas de Jacareí
 make install
 ```
 
+or
+
+```bash
+npm install -g gulp-cli gulp
+npm install
+```
+
+or
+
+```
+Use a vscode extension to preview the HTML
+```
+
 ## How to run
 
 ```bash
 make run
+```
+
+or
+
+```bash
+gulp serve
+```
+
+or
+
+```
+Use a vscode extension to preview the HTML
 ```
 
 Visit <http://localhost:3001>
